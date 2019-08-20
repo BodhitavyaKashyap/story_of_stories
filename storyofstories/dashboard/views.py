@@ -6,5 +6,5 @@ from django.http import HttpResponse
 
 # dashboard landing page
 def dashboard(Request):
-    return HttpResponse("Hey ya")
+    return render(Request,'dashboard.html',{'name':"BodhitavyaKashyap"})
 
