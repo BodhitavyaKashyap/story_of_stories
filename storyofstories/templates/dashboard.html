@@ -1,15 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #body {
+            background: #c0c0aa;
+            background: -webkit-linear-gradient(to left, #1cefff, #c0c0aa);
+            background: linear-gradient(to left, #1cefff, #c0c0aa);
+        }
+
+        #lastcell {
+            align-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            -webkit-animation-name: example;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 2;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-direction: alternate;
+            /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        #lastcell1 {
+            align-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            -webkit-animation-name: example1;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 2;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-direction: alternate;
+            /* Safari 4.0 - 8.0 */
+            animation-name: example1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes example1 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: green;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: yellow;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
     <title>Dashboard</title>
 </head>
-<body bgcolor="bodhitavyaKashyap">
+
+<body id="body">
     {% block content %}
-        <h1>MY NAME IS {{name}}</h1>
+    <h1 style="text-align: center">The story starts here,today</h1>
+    <h3 style="text-align: center">narrator - {{name}}</h3>
+    <div style="align-items : center">
+        <table style="text-align:center;width:100%">
+            <tr>
+                <th>TABLE_OF_CONTENT</th>
+            </tr>
+            <tr style='text-align: center'>
+                <td>
+                    <p>clickMe</p>
+                </td>
+            </tr>
+            
+        </table>
+    </div>
     {% endblock %}
-    
+
 </body>
+
 </html>

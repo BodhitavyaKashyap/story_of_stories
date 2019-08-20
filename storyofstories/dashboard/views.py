@@ -8,3 +8,6 @@ from django.http import HttpResponse
 def dashboard(Request):
     return render(Request,'dashboard.html',{'name':"BodhitavyaKashyap"})
 
+def enter(Request):
+    return render(Request,'stackml.html')
+
